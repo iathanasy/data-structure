@@ -287,9 +287,11 @@ public class DoubleCircleLinkedList<E> extends IAbstractList<E> {
         }
         list.reset(); // current->1
         while(!list.isEmpty()){
-            list.next();
-            list.next();
-            System.out.println(list.remove());
+            Integer next = list.next();// 2 5 8 4 8 7 7 7
+            System.out.println("next-->"+ next);
+            Integer next1 = list.next();// 3 6 1 5 2 8 4 7
+            System.out.println("next1-->"+ next1);
+            System.out.println(list.remove()); // 3 6 1 5 2 8 4 7
         }
     }
 }
