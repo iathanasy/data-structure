@@ -104,7 +104,7 @@ public class DoubleLinkedList<E> extends IAbstractList<E> {
 
         // index == 0
         if(prev == null){
-            first = last;
+            first = next;
         }else{
             prev.next = next;
         }
