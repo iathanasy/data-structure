@@ -68,9 +68,86 @@ public class Main {
          BinaryTrees.println(bst);
     }
 
+    static void test4() {
+        Integer data[] = new Integer[] {
+                7, 4, 9, 2, 1
+        };
+
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        for (int i = 0; i < data.length; i++) {
+            bst.add(data[i]);
+        }
+        BinaryTrees.println(bst);
+
+        System.out.println("------------------前序遍历------------");
+        bst.preorder(new BinarySearchTree.Visitor<Integer>() {
+            public boolean visit(Integer element) {
+                System.out.print(element + " ");
+                return false;
+//                return element == 2 ? true : false;
+            }
+        });
+        System.out.println();
+
+        bst.preorderit(new BinarySearchTree.Visitor<Integer>() {
+            public boolean visit(Integer element) {
+                System.out.print(element + " ");
+                return false;
+//                return element == 1 ? true : false;
+            }
+        });
+        System.out.println();
+        System.out.println("-------------------------------------");
+
+
+        System.out.println("------------------中序遍历------------");
+        bst.inorder(new BinarySearchTree.Visitor<Integer>() {
+            public boolean visit(Integer element) {
+                System.out.print(element + " ");
+                return false;
+//                return element == 4 ? true : false;
+            }
+        });
+        System.out.println();
+
+//        bst.inorderit(new BinarySearchTree.Visitor<Integer>() {
+//            public boolean visit(Integer element) {
+//                System.out.print(element + " ");
+//                return false;
+////                return element == 4 ? true : false;
+//            }
+//        });
+//        System.out.println();
+
+        System.out.println("-------------------------------------");
+
+
+        System.out.println("------------------后序遍历------------");
+        bst.postorder(new BinarySearchTree.Visitor<Integer>() {
+            public boolean visit(Integer element) {
+                System.out.print(element + " ");
+                return false;
+//                return element == 4 ? true : false;
+            }
+        });
+        System.out.println();
+        System.out.println("-------------------------------------");
+
+        System.out.println("------------------层序遍历------------");
+        bst.levelorder(new BinarySearchTree.Visitor<Integer>() {
+            public boolean visit(Integer element) {
+                System.out.print(element + " ");
+                return false;
+//                return element == 9 ? true : false;
+            }
+        });
+        System.out.println();
+    }
+
     public static void main(String[] args) {
 //        test1();
-        test2();
-//        test1();
+//        test2();
+//        test3();
+        test4();
     }
 }
