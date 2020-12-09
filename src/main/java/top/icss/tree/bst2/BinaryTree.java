@@ -57,11 +57,11 @@ public class BinaryTree<E> implements BinaryTreeInfo {
      * 树状结构展示（注意左右子树的顺序）
      * @param visitor
      */
-    public void preorder(BinarySearchTree.Visitor<E> visitor) {
+    public void preorder(Visitor<E> visitor) {
         if (visitor == null) return;
         preorder(root, visitor);
     }
-    private void preorder(Node<E> node, BinarySearchTree.Visitor<E> visitor){
+    private void preorder(Node<E> node, Visitor<E> visitor){
         if(node == null || visitor.stop ) return;
         // root -> left -> right
         visitor.stop = visitor.visit(node.element);
@@ -73,7 +73,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
      * 前序遍历（迭代）
      * @param visitor
      */
-    public void preorderit(BinarySearchTree.Visitor<E> visitor){
+    public void preorderit(Visitor<E> visitor){
         if (root == null || visitor == null) return;
 
         Stack<Node<E>> stack = new Stack<>();
@@ -103,11 +103,11 @@ public class BinaryTree<E> implements BinaryTreeInfo {
      * 二叉搜索树的中序遍历按升序或者降序处理节点
      * @param visitor
      */
-    public void inorder(BinarySearchTree.Visitor<E> visitor) {
+    public void inorder(Visitor<E> visitor) {
         if (visitor == null) return;
         inorder(root, visitor);
     }
-    private void inorder(Node<E> node, BinarySearchTree.Visitor<E> visitor){
+    private void inorder(Node<E> node, Visitor<E> visitor){
         if(node == null || visitor.stop ) return;
 
         inorder(node.left, visitor);
@@ -122,11 +122,11 @@ public class BinaryTree<E> implements BinaryTreeInfo {
      * 适用于一些先子后父的操作
      * @param visitor
      */
-    public void postorder(BinarySearchTree.Visitor<E> visitor) {
+    public void postorder(Visitor<E> visitor) {
         if (visitor == null) return;
         postorder(root, visitor);
     }
-    private void postorder(Node<E> node, BinarySearchTree.Visitor<E> visitor){
+    private void postorder(Node<E> node, Visitor<E> visitor){
         if(node == null || visitor.stop ) return;
 
         postorder(node.left, visitor);
@@ -141,7 +141,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
      * 从上到下、从左到右依次访问每一个节点
      * @param visitor
      */
-    public void levelorder(BinarySearchTree.Visitor<E> visitor){
+    public void levelorder(Visitor<E> visitor){
         if (root == null || visitor == null) return;
 
         Queue<Node<E>> queue = new LinkedList<>();
@@ -250,6 +250,19 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         return myNode.element + "_p(" + parentString + ")";
     }
 
+
+    /**
+     * 访问器接口 ——> 访问器抽象类
+     * @param <E>
+     */
+    public static abstract class Visitor<E> {
+        boolean stop;
+        /**
+         * @return 如果返回true，就代表停止遍历
+         */
+        public abstract boolean visit(E element);
+    }
+    
     /**
      * 节点
      * @param <E>

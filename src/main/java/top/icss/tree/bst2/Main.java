@@ -1,8 +1,6 @@
 package top.icss.tree.bst2;
 import top.icss.tree.printer.BinaryTrees;
 
-import java.util.Comparator;
-
 /**
  * @author: Mr.Wang
  * @create: 2020-11-30 下午 21:49
