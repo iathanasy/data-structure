@@ -153,6 +153,15 @@ public class AVLTree<E> extends BST<E> {
         }
     }
 
+    /**
+     * 统一旋转
+     * @param r
+     * @param b
+     * @param c
+     * @param d
+     * @param e
+     * @param f
+     */
     private void rotate(
             Node<E> r, // 子树的根节点
             Node<E> b, Node<E> c,

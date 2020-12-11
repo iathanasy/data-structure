@@ -1,5 +1,24 @@
 # data-structure
 # 数据结构
-
+## 数组
+> [动态数组](https://github.com/iathanasy/data-structure/tree/master/src/main/java/top/icss/list/array)
+> [资料](http://note.youdao.com/s/Xeyxt7G4)
+## 链表
+> [单/双向链表](https://github.com/iathanasy/data-structure/tree/master/src/main/java/top/icss/list/linkedlist)
+> [资料](http://note.youdao.com/s/2t2fCSMA)
+## 队列
+> [双端/队列](https://github.com/iathanasy/data-structure/tree/master/src/main/java/top/icss/queue)
+> [资料](http://note.youdao.com/s/FBTZnlBZ)
+## 栈
+> [栈](https://github.com/iathanasy/data-structure/tree/master/src/main/java/top/icss/stack)
+> [资料](http://note.youdao.com/s/8SAYFhr8)
+## 树
+> [二叉树/搜索树/AVL平衡二叉搜索树/红黑树](https://github.com/iathanasy/data-structure/tree/master/src/main/java/top/icss/tree)
+> [二叉树](http://note.youdao.com/s/Xn5ES0M1)
+> [二叉搜索树](http://note.youdao.com/s/1U4TlC8t)
+> [平衡二叉搜索树](http://note.youdao.com/s/VDelHPKf)
+> [B树](http://note.youdao.com/s/Lf6hzoqk)
+> [AVL树](http://note.youdao.com/s/5oxyLFx3)
+> [红黑树](http://note.youdao.com/s/Bt3Hikhc)
 # LeetCode
 
